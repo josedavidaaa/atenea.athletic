@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
+    url('./assets/marble-2398946_1280.jpg');
+    background-size: cover;
+}
+
+.container{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.hero{
+    height: 100%;
+    color: #fff;
+}
+
+.nav{
+    --state-close: scale(0);
+    --state-hamburguer:scale(1);
+    --state-menu: translate(-100%);
+
+    padding: 40px 0;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: repeat(2, max-content);
+    font-family: "Poppins", sans-serif
+}
+
+.nav:target{
+    --state-menu: translate(0);
+    --state-close: scale(1);
+    --state-hamburguer:scale(0);
+}
+
+.nav__logo{
+    font-size: 2.5rem;
+    z-index: 1;
+}
+
+.nav__hamburguer, 
+.nav__close{
+    cursor: pointer;
+    grid-column: -2/-1;
+    grid-row: 1/2;
+    transition: .4s transform;
+}
+
+.nav__hamburguer{
+    transform: var(--state-hamburguer);
+}
+
+.nav__close{
+    transform: var(--state-close);
+}
+
+.nav__icon{
+    width: 40px;
+}
+
+.nav__links{
+    background-color: #000;
+    position: absolute;
+    text-decoration: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+
+    display: grid;
+    align-content: center;
+    gap: 2em;
+    padding-left: 5%;
+
+    transform: var(--state-menu);
+    transition: .3s transform;
+}
+.nav__arrow{
+    margin-left: auto;
+    transform: var(--rotate, 0);
+    transition: .2s transform;
+}
+
+.nav_checkbox{
+    position: absolute;
+    width: 100%;
+    height: 5%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.nav__item{
+    list-style: none;
+    transition: all 1s;
+}
+.nav__item:has( :checked ){
+    --rows: 1fr;
+    --rotate: rotate(180deg);
+    --bg: #28303B;
+}
+
+.nav_list_links{
+    display: grid;
+    grid-template-rows: var(--rows, 0fr);
+    transition: .3s grid-template-rows;
+}
+
+.nav_sub{
+    overflow: hidden;
+}
+.nav_sub_list{
+    width: 85%;
+    list-style: none;
+    margin-left: auto;
+}
+.nav__anchor{
+    padding: 1em 0;
+    display: block;
+    color: #B6BABE;
+    text-decoration: none;
+}
+
+.nav__link{
+    color: #D5AD5C;;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+
+.nav a{
+    text-decoration: none;
+}
+
+@media (min-width:1200px){
+    
+    .nav__item:hover{
+        transform: scale(1.2);
+    }
+    .nav__item:hover{
+        background-color: #675f5f;
+        border-radius: 10px;
+        transform: scale(1.0);
+     }
+}
+
+@media (min-width:768px) {
+   
+   .nav__arrow{
+        display: none;
+      }
+    .nav{
+        --state-hamburguer:scale(0);
+        --state-menu: translate(0);
+    }
+    
+    .nav:target{
+        --state-close: scale(0);
+    }
+
+    .nav__links{
+        padding: 0;
+        background-color: unset;
+        position: unset;
+        gap: 1.5em;
+        grid-auto-flow: column;
+    
+        transform: unset;
+
+        grid-column: -2/-1;
+        grid-row: 1/2;
+    }
+
+    .nav__link{
+        font-size: 1rem;
+        letter-spacing: none;
+    }
+    .nav_checkbox{
+        display: none;
+    }
+    .nav__item{
+        text-align: center;
+        width: 100px;
+    }
+    
+    
+}
+
+
+
+@media (max-width:768px) {
+  .list_products{
+    display: none;
+  }
+  .product-group .products{
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+  }
+
+}
+
+
+.store-wrapper{
+    display: flex;
+ 
+  }
+
+  footer.footer {
+    background-color: #2b2b2b;
+    padding: 20px;
+    color: #fff;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    margin-top: auto; /* Empuja el footer al fondo de la pantalla cuando el contenido es corto */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.contact-info, .about-company {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 4% 0% 5%;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.about-company h4 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.about-company p {
+    color: #b0b0b0;
+    line-height: 1.5;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #3b3b3b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #4da8ff;
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info-item {
+        justify-content: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .about-company p {
+        font-size: 16px;
+    }
+}
+
+.div_padre{
+    display: flex;
+}
+.conten_1 {
+ display: flex;
+ justify-content: center;
+ height: 600px;
+ padding: 30px;
+ 
+}
+.content_one{
+    width: 90%;
+    height: 70px;
+    color: #000;
+    font-size: 40px;
+    text-decoration: none;
+    box-shadow: #28303B;
+    text-transform: uppercase;
+}
+.conten_img{
+    background-color: #fff;
+}
+.content_two{
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+}
+.content_tree{
+    font-size: 30px;
+    color: #000;
+    text-decoration: none;
+
+}
+.list_content_two{
+    width: 20%;
+    height: 35px;
+}
+
+.content_fourd{
+display: grid;
+grid-template-columns: repeat(1,1fr);
+padding-top: 4%;
+}
+.content_fourd---{
+    font-size: 30px;
+    padding-top: 7%;
+    color: #000;
+    text-decoration: none;
+    list-style: none;
+}
+
+.select_one{
+    width: 20%;
+    height: 40px;
+    background-color: cornsilk;
+    
+}
+.button-padre{
+    padding-top: 5%;
+}
+.button_one{
+    height: 40px;
+    width: 20%;
+    background-color: #d9960f;
+    color: #fff;
+    border-radius: 5px;
+}
+.Descrip{
+    padding-top: 4%;
+}
+
+.descrip-{
+    font-size: 40px;
+    color: #000;
+    text-decoration: none;
+}
+
+.descripción{
+    font-size: 15px;
+    color: #000;
+}

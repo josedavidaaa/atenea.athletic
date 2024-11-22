@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./sub-pagina-5.css">
+
+
+</head>
+<body>
+
+    <header class="hero">
+
+        <nav class="nav container" id="nav">
+            <h2 class="nav__logo">Atenea Athletic</h2>
+
+            <ul class="nav__links">
+
+                <li class="nav__item">
+                    <a href="inicio.html" class="nav__link">Inicio</a>
+                </li>
+                <li class="nav__item">
+                    <a href="sub-pagina-2.html" class="nav__link">Hombres</a>
+                </li>
+                <li class="nav__item">
+                    <a href="sub-pagina3.html" class="nav__link">Mujeres</a>
+                </li>
+                <li class="nav__item">
+                    <a href="sub-pagina-4.html" class="nav__link">Zapatos</a>
+                </li>
+                <li class="nav__item">
+                    <a href="sub-pagina-5.html" class="nav__link">Contacto</a>
+                </li>
+
+            </ul>
+
+            <a href="#nav" class="nav__hamburguer">
+                <img src="./assets/menu.svg" class="nav__icon">
+            </a>
+
+            <a href="#" class="nav__close">
+                <img src="./assets/close.svg" class="nav__icon">
+            </a>
+        </nav>
+    </header>
+    <div class="main-container">
+
+        <!-- Contenedor del formulario a la derecha -->
+        <div class="form-container">
+            <form action="" method="get">
+                <table align="center" border="0">
+                    <tr>
+                        <td colspan="3" align="center">
+                            <h2>Contactanos</h2>
+                        </td>
+                    </tr>            
+                    <tr>            
+                        <th>Nombre</th>                
+                        <td><input type="text" name="nombre" placeholder="Escribir el nombre"></td>
+                    </tr>
+                    <tr>
+                        <th>Sexo</th>
+                        <td>
+                            Mujer <input type="radio" name="sexo" value="mujer">
+                            Hombre <input type="radio" name="sexo" value="hombre">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Correo</th>
+                        <td><input type="email" name="correo" placeholder="Indicar el Correo"></td>
+                    </tr>
+                    <tr>
+                        <th>Nro de Tlf</th>
+                        <td>
+                            <select name="codigo" style="width: 30% !important;">
+                                <option value="0412">0412</option>
+                                <option value="0414">0414</option>
+                                <option value="0416">0416</option>
+                                <option value="0424">0424</option>
+                                <option value="0426">0426</option>
+                            </select>
+                            <input type="number" style="width: 64% !important" name="telefono" placeholder="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" align="left">Comentarios</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <textarea placeholder="Queremos saber tu opinión" name="Comentarios" id="" cols="30" rows="5"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="Enviar">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <!-- Contenedor del mapa a la izquierda -->
+        <div class="map-container">
+            <h2>Ubicación</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.3796553727693!2d-69.2850529!3d10.0679451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e875d87213da663%3A0xd5268a33f433f55e!2sCentro%20Comercial%20Paris%2C%20Barquisimeto%203001%2C%20Lara!5e0!3m2!1ses-419!2sve!4v1731441580129!5m2!1ses-419!2sve" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+            <table>
+                <tr>
+                    <th>Ubicación</th>
+                    <td>Centro Comercial Paris, Av. Los Leones, Barquisimeto 3001, Lara</td>
+                </tr>
+                <tr>
+                    <th>Teléfono</th>
+                    <td>
+                        <a href="https://wa.me/584145188384" target="_blank" style="text-decoration: none; color: #956100; font-weight: bold;">
+                            Contáctanos por WhatsApp: 0414-5188384
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Instagram</th>
+                    <td>
+                        <a href="https://www.instagram.com/atenea.athletic?igsh=bXlha2V4ZHozOWc=" style="text-decoration: none; color: #956100; font-weight: bold;">atenea.athletic</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div>
+        <a href="https://wa.me/584145188384" class="whatsapp-button" target="_blank" aria-label="Chatea con nosotros en WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">            
+            <!-- Sección de información de contacto -->
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt icon"></i>
+                    <div>
+                        <p>Av. 2 entre calles 7 y 8, Nva Segovia</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt icon"></i>
+                    <div>
+                        <p>C.C. Ciudad Paris, piso 1.</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone icon"></i>
+                    <div>
+                        <p>+584145188384</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Sección de descripción y redes sociales -->
+            <div class="about-company">
+                <h4>Atenea Athletic</h4>
+                <p>Descubre nuestra exclusiva colección de ropa para damas y caballeros, diseñada para inspirar estilo y confianza en cada ocasión.</p>
+                <div class="social-icons">
+                    <a href="https://wa.me/584145188384"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/atenea.athletic?igsh=bXlha2V4ZHozOWc="><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
